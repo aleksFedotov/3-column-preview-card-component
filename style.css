@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bright-orange: hsl(31, 77%, 52%);
+  --color-dark-cyan: hsl(184, 100%, 22%);
+  --color-very-dark-cyan: hsl(179, 100%, 13%);
+  --color-transperent-white: hsla(0, 0%, 100%, 0.75);
+  --color-very-light-grey: hsl(0, 0%, 95%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.5;
+}
+
+body {
+  font-size: 1.5rem;
+  background-color: var(--color-very-light-grey);
+  font-family: 'Lexend Deca', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 95rem;
+  width: 100%;
+  display: flex;
+  border-radius: 0.8rem;
+  color: var(--color-transperent-white);
+  overflow: hidden;
+  margin: 4rem;
+}
+
+.container__card {
+  flex: 1;
+}
+
+.sedans {
+  background-color: var(--color-bright-orange);
+}
+
+.suvs {
+  background-color: var(--color-dark-cyan);
+}
+
+.luxury {
+  background-color: var(--color-very-dark-cyan);
+}
+
+.card {
+  padding: 5rem;
+}
+
+.card > *:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.card__heading {
+  font-family: 'Big Shoulders Display', sans-serif;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+
+.card__text {
+  color: var(--color-transperent-white);
+}
+
+.card__btn {
+  background-color: var(--color-very-light-grey);
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  border: 1px solid var(--color-very-light-grey);
+  padding: 1.5rem 3rem;
+  border-radius: 100px;
+  display: inline-block;
+  margin-top: 7rem;
+}
+
+.sedans .card__btn:active,
+.suvs .card__btn:active,
+.luxury .card__btn:active {
+  background-color: transparent;
+  color: var(--color-very-light-grey);
+}
+
+.sedans .card__btn {
+  color: var(--color-bright-orange);
+}
+.suvs .card__btn {
+  color: var(--color-dark-cyan);
+}
+.luxury .card__btn {
+  color: var(--color-very-dark-cyan);
+}
+
+@media only screen and (max-width: 62.5em) {
+  .container {
+    flex-direction: column;
+    max-width: 500px;
+  }
+
+  .card {
+    padding: 5rem 3.5rem;
+  }
+
+  .card__btn {
+    margin-top: 1rem;
+  }
+}
