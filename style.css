@@ -88,11 +88,17 @@ body {
   margin-top: 7rem;
 }
 
+.sedans .card__btn:hover,
+.suvs .card__btn:hover,
+.luxury .card__btn:hover {
+  background-color: transparent;
+  color: var(--color-very-light-grey);
+}
+
 .sedans .card__btn:active,
 .suvs .card__btn:active,
 .luxury .card__btn:active {
-  background-color: transparent;
-  color: var(--color-very-light-grey);
+  transform: scale(0.98);
 }
 
 .sedans .card__btn {
